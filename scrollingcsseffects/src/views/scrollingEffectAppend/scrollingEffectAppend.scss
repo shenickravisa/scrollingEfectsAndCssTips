@@ -1,0 +1,47 @@
+.scrolling-effect-append {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("https://www.villamontana.com.mx/wp-content/uploads/2016/05/66886-Morelia.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  .header-box {
+      position: absolute;
+      width: 100%;
+      height: 250px;
+      padding: 20px;
+      bottom: 0;
+      color: #efefef;
+      background: linear-gradient(to bottom,
+      rgba($color: #000, $alpha: 0),
+      rgba($color: #000, $alpha: 0.7),
+      rgba($color: #000, $alpha: 0.9)
+      );
+      overflow: hidden;
+      h1 {
+          font-size: 2rem;
+          padding: 10px 0;
+      }
+      div {
+          font-size: 1.2rem;
+          transition-delay: .1s;
+      }
+      p {
+          padding: 10px 0;
+          font-size: 1rem ;
+          transition-delay: .2s;
+      }
+  }
+}
+
+.before-enter {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+
+.enter {
+    opacity: 1;
+    transform: translateX(0px);
+}
